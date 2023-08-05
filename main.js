@@ -106,8 +106,7 @@ conversionResult = 0;
 
 conversionCalculator();
 
-
-
+alert(`Thank you ${user} for choosing Pixel Converter. See you next time!`)
 
 
 

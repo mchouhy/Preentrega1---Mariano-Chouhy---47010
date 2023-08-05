@@ -17,11 +17,11 @@ function userRegistration() {
         console.log(`Hello ${user}!`);
         alert(`Hello ${user}!`);
     }
-    }
+}
 
 function errorAlert(param1) {
-        alert(`Error: You have to register a valid ${param1}.`);
-    }
+    alert(`Error: You have to register a valid ${param1}.`);
+}
 
 function passwordRegistration() {
     password = prompt("Register a password");
@@ -33,7 +33,7 @@ function passwordRegistration() {
         console.log(`Congratulations! You are now registered. Remember that your password is: ${password}.`);
         alert(`Congratulations! You are now registered. Remember that your password is: ${password}. Now click acept and start converting!`);
     }
-    }
+}
 
 function getUnit() {
     conversionUnit = prompt("Choose what CSS length units you want to convert. Type:\npx to rem\nrem to px\npx to cm\ncm to px");
@@ -43,19 +43,20 @@ function getUnit() {
     }
     if (conversionUnit === "px to rem" || conversionUnit === "rem to px" || conversionUnit === "px to cm" || conversionUnit === "cm to px") {
         conversionNumber = parseFloat(prompt("Enter the number you want to convert")); {
-            while (isNaN (conversionNumber)) {
-            errorAlert2 ('number');
-            conversionNumber = parseFloat(prompt("Enter the number you want to convert"));
+            while (isNaN(conversionNumber)) {
+                errorAlert2('number');
+                conversionNumber = parseFloat(prompt("Enter the number you want to convert"));
+            }
         }
+
     }
-    
-}}
+}
 
 function errorAlert2(param2) {
     alert(`Error: ${user} you have to enter the lenght ${param2} you want to convert as indicated. Try again.`);
 }
 
-function conversionCalculator(){
+function conversionCalculator() {
     switch (conversionUnit) {
         case "px to rem":
             conversionResult = conversionNumber / 16;
@@ -73,7 +74,7 @@ function conversionCalculator(){
             alert(`${conversionNumber} px = ${conversionResult} cm.`);
             break
         case "cm to px":
-            conversionResult = conversionNumber * 37.7952755906; 
+            conversionResult = conversionNumber * 37.7952755906;
             console.log(`${conversionNumber} cm = ${conversionResult} px.`);
             alert(`${conversionNumber} cm = ${conversionResult} px.`);
             break

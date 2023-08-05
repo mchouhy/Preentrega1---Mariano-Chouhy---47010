@@ -1,8 +1,11 @@
 // VARIABLES GLOBALES //
 
 let user;
+
 let password;
+
 let conversionUnit;
+
 let conversionResult = 0;
 
 // FUNCIONES //

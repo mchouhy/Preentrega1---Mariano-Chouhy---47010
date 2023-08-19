@@ -8,6 +8,13 @@ let conversionUnit;
 
 let conversionResult = 0;
 
+const conversions = [
+    { type: "px to rem", factor: 1/16 },
+    { type: "rem to px", factor: 16 },
+    { type: "px to cm", factor: 1/37.7952755906 },
+    { type: "cm to px", factor: 37.7952755906 },
+]
+
 // FUNCIONES //
 
 function userRegistration() {
@@ -44,14 +51,14 @@ function getUnit() {
         errorAlert2('units');
         conversionUnit = prompt("Choose what CSS length units you want to convert. Type:\npx to rem\nrem to px\npx to cm\ncm to px");
     }
-    if (conversionUnit === "px to rem" || conversionUnit === "rem to px" || conversionUnit === "px to cm" || conversionUnit === "cm to px") {
-        conversionNumber = parseFloat(prompt("Enter the number you want to convert")); {
-            while (isNaN(conversionNumber)) {
-                errorAlert2('number');
-                conversionNumber = parseFloat(prompt("Enter the number you want to convert"));
-            }
-        }
 
+    const conversion = conversions.find(conv => conv.type === conversionUnit);
+    if (conversion) {
+        conversionNumber = parseFloat(prompt("Enter the number you want to convert")); 
+        while (isNaN(conversionNumber)) {
+            errorAlert2('number');
+            conversionNumber = parseFloat(prompt("Enter the number you want to convert"));
+        }
     }
 }
 
@@ -60,32 +67,16 @@ function errorAlert2(param2) {
 }
 
 function conversionCalculator() {
-    switch (conversionUnit) {
-        case "px to rem":
-            conversionResult = conversionNumber / 16;
-            console.log(`${conversionNumber} px = ${conversionResult} rem.`);
-            alert(`${conversionNumber} px = ${conversionResult} rem.`);
-            break
-        case "rem to px":
-            conversionResult = conversionNumber * 16;
-            console.log(`${conversionNumber} rem = ${conversionResult} px.`);
-            alert(`${conversionNumber} rem = ${conversionResult} px.`);
-            break
-        case "px to cm":
-            conversionResult = conversionNumber / 37.7952755906;
-            console.log(`${conversionNumber} px = ${conversionResult} cm.`);
-            alert(`${conversionNumber} px = ${conversionResult} cm.`);
-            break
-        case "cm to px":
-            conversionResult = conversionNumber * 37.7952755906;
-            console.log(`${conversionNumber} cm = ${conversionResult} px.`);
-            alert(`${conversionNumber} cm = ${conversionResult} px.`);
-            break
-        default:
-            alert(`Error: ${user} you have to enter the lenght units you want to convert as indicated. Try again.`);
-            getUnit();
-            conversionCalculator();
-    }
+    const conversion = conversions.find(conv => conv.type === conversionUnit);
+    if (conversion) {
+        conversionResult = conversionNumber * conversion.factor;
+        console.log(`${conversionNumber} ${conversion.type.split(" ")[0]} = ${conversionResult} ${conversion.type.split(" ")[2]}.`);
+        alert(`${conversionNumber} ${conversion.type.split(" ")[0]} = ${conversionResult} ${conversion.type.split(" ")[2]}.`);
+    } else {
+        alert(`Error: ${user} you have to enter the length units you want to convert as indicated. Try again.`);
+        getUnit();
+        conversionCalculator();
+    }   
 }
 
 //MENSAJE DE BIENVENIDA//
@@ -110,26 +101,4 @@ conversionResult = 0;
 
 conversionCalculator();
 
-alert(`Thank you ${user} for choosing Pixel Converter. See you next time!`)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+alert(`Thank you ${user} for choosing Pixel Converter. See you next time!`);

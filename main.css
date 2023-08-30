@@ -5,50 +5,57 @@
     text-decoration: none;
 }
 
-header nav {
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
+header {
+    margin-bottom: 60px;
 }
 
-header nav h1 {
-    font-family: 'Press Start 2P', cursive;
-    color: #189e88;
+header .container {
+    display: flex;
+}
+
+
+header .container h1 {
+    font-size: 2.5rem;
+    font-family: 'Luckiest Guy', cursive;
+    color: #283d44;
     margin-top: 40px;
 }
 
-.container {
-    padding: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
+header .container h1 span {
+    color: #f94f5b;
+}
+
+.hero {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    gap: 5rem;
     align-items: center;
+    margin-bottom: 50px;
 }
 
-.container img {
-    width: 50%;
+.hero img {
+    width: 40%;
 }
 
-.hero-text {
-    width: 50%;
-}
 
 .hero-text h1 {
-    font-family: 'Roboto', sans-serif;;
-    font-size: 3.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
     margin-bottom: 8px;
-    color: #2e4850;
+    color: #283d44;
+    font-weight: 700;
+}
+
+.hero-text h1 span {
+    color: #f94f5b;
 }
 
 .hero-text p {
-    font-family: 'Roboto';
-    font-size: 1.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3rem;
     margin-bottom: 12px;
-    color: #2e4850;
+    color: #283d44;
+    font-weight: 500;
 }
 
 .hero-text button {
@@ -56,18 +63,189 @@ header nav h1 {
     margin: 8px;
     border-radius: 4px;
     border: none;
-    background-color: #189e88;
-    color: whitesmoke;
+    background-color: #f94f5b;
+    color: white;
     font-weight: 800;
-    font-size: 0.85em;
+    font-size: 1em;
     text-transform: uppercase;
     text-align: center;
-    box-shadow: 0em -0.2rem 0em #189e88 inset;
+    box-shadow: 0em -0.2rem 0em #f94f5b inset;
+    font-weight: 500;
 }
 
 button:hover {
     background-color: transparent;
-    color: #189e88;
-    border: 3px solid #189e88;
+    color: #f94f5b;
+    border: 3px solid #f94f5b;
     cursor: pointer;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    height: 100px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider .slide-track {
+    animation: scroll 25s linear infinite;
+    display: flex;
+    justify-content: space-evenly;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 150px;
+    width: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+    color: #283d44;
+    text-align: center;
+}
+
+.slider .slide2 {
+    color: #f94f5b;
+}
+
+.section-calculator {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-forms {
+    display: flex;
+    gap: 50px;
+    font-family: 'Poppins', sans-serif;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+#calculator-container {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 35px;
+    border: 2px solid #283d44;
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    box-shadow: 10px 5px 30px -14px #f94f5b;
+    font-size: 1.4rem;
+}
+
+#calculator-container .row .col input {
+    text-align: center;
+}
+
+.btn-row button {
+    width: 207px;
+    height: 38px;
+    border-radius: 4px;
+    border: none;
+    background-color: #f94f5b;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0em -0.2rem 0em #f94f5b inset;
+    font-size: 1rem;
+}
+
+.btn-row:hover {
+    cursor: pointer;
+}
+
+#information-container {
+    background: #f94f5b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 20px;
+    border: 2px solid #283d44;
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    box-shadow: 10px 5px 30px -14px #f94f5b;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding-top: 20px;
+}
+
+#information-container ul {
+    list-style: none;
+}
+
+#information-container ul li {
+    padding-bottom: 10px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    color: #283d44;
+    text-decoration-color: #283d44;
+    margin-bottom: 40px;
+}
+
+.arrow img {
+    width: 30px;
+}
+
+
+
+@media (max-width: 991px) {
+    .hero {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .hero .hero-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 70%;
+    }
+
+    .calculator-forms {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20rem;
+    }
+
+    #calculator-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #information-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .arrow {
+        padding: 40px;
+    }
 }

@@ -5,39 +5,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Mariano Chouhy">
+    <link rel="shortcut icon" href="./images/icons8-pixel-heart-windows-11-color-32.png" type="image/x-icon">
 
     <!--Website Title-->
     <title>Pixel Converter | Your CSS length units calculator</title>
-    
+
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!--Bootstrap CDN Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!--CDN ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--CDN AOS ANIMATIONS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--CSS Link-->
     <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1>PIXEL CONVERTER</h1>
-        </nav>
-    </header>
-    <main>
+    <header id="header-logo">
         <div class="container">
-            <img src="./images/3371524_1_400x400.jpg" alt="">
-            <div class="hero-text">
-                <h1>Struggling with absolute and relative units?</h1>
-                <p>Pixel Converter to the rescue!</p>
-                <button>Convert Now</button>
+            <h1 class="animate__animated animate__backInDown">PIXEL <span>CONVERTER</span></h1>
+        </div>
+    </header>
+    <div class="container hero">
+        <img class="img-fluid animate__animated animate__backInRight" src="./images/hero.jpg" alt="">
+        <div class="hero-text animate__animated animate__backInLeft">
+            <h1>Struggling with <span>CSS length units</span>?</h1>
+            <p>Pixel Converter to the rescue!</p>
+            <a href="#calculator-container"><button href="#calculator-container">Start Now</button></a>
+        </div>
+    </div>
+
+    <div class="container slider animate__animated animate__backInUp">
+        <div class="slide-track">
+            <div class="slide">
+                <h3>Pixels</h3>
+            </div>
+            <div class="slide slide2">
+                <h3>Rems</h3>
+            </div>
+            <div class="slide">
+                <h3>Centimeters</h3>
+            </div>
+            <div class="slide slide2">
+                <h3>Milimeters</h3>
+            </div>
+            <div class="slide">
+                <h3>Inches</h3>
+            </div>
+            <div class="slide slide2">
+                <h3>Picas</h3>
+            </div>
+            <div class="slide">
+                <h3>Points</h3>
+            </div>
+            <div class="slide slide2">
+                <h3>Em</h3>
+            </div>
+            <div class="slide">
+                <h3>Ex</h3>
             </div>
         </div>
-    </main>
+    </div>
+
+    <div class="calculator-forms container">
+        <div id="calculator-container" class="container">
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="formGroupExampleInput" class="form-label">From:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>--Select Lenght Unit--</option>
+                        <option value="1">Pixels</option>
+                        <option value="2">Rem</option>
+                        <option value="3">Centimeters</option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">To:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>--Select Lenght Unit--</option>
+                        <option value="1">Pixels</option>
+                        <option value="2">Rem</option>
+                        <option value="3">Centimeters</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Value:</label>
+                        <input type="number" class="form-control" id="formGroupExampleInput"
+                            placeholder="Conversion Number">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Result:</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row btn-row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        Reset</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                        Convert</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="information-container" class="container">
+            <h3>Lenght Units</h3>
+            <ul>
+                <li>Centimeters: 1cm = 37.8px = 25.2/64in</li>
+                <li>Millimeters: 1mm = 1/10th of 1cm</li>
+                <li>Quarter-Millimeters: 1Q = 1/40th of 1cm</li>
+                <li>Inches: 1in = 2.54cm = 96px</li>
+                <li>Picas: 1pc = 1/6th of 1in</li>
+                <li>Points: 1pt = 1/72nd of 1in</li>
+                <li>Pixels: 1px = 1/96th of 1in</li>
+            </ul>
+        </div>
+    </div>
+
+    <a class="arrow" href="#header-logo"><img src="./images/up-arrow (1).png" alt=""></a>
 
     <!--Javascript Link-->
-    <script src="./main.js"></script>
+    <script src=""></script>
+
+    <!--Bootstrap JS Link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!--CDN AOS ANIMATIONS JS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
 </body>
 
 </html>

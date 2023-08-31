@@ -7,7 +7,8 @@
 }
 
 header {
-    margin-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 
 header .container {
@@ -19,7 +20,6 @@ header .container h1 {
     font-size: 2.5rem;
     font-family: 'Luckiest Guy', cursive;
     color: #283d44;
-    margin-top: 40px;
 }
 
 header .container h1 span {
@@ -91,11 +91,12 @@ button:hover {
 }
 
 .slider {
+    position: sticky;
+    top: 0;
     height: 100px;
     margin-top: 45px;
     margin-bottom: 45px;
     overflow: hidden;
-    position: relative;
 }
 
 .slider .slide-track {

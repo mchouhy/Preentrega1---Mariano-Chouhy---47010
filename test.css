@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: chocolate;
+}
+
+.container {
+    background-color: white;
+    font-size: 20px;
+    width: 80vmin;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 2em 2em 2em 2em
+}
+
+.container h1 {
+    background-color: blue;
+}

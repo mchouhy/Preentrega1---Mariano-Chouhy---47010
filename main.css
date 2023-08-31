@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -143,7 +144,7 @@ button:hover {
     border: 2px solid #283d44;
     border-radius: 20px;
     backdrop-filter: blur(100px);
-    box-shadow: 10px 5px 30px -14px #f94f5b;
+    box-shadow: 10px 5px 35px -14px #f94f5b;
     font-size: 1.4rem;
 }
 
@@ -155,9 +156,9 @@ button:hover {
     width: 207px;
     height: 38px;
     border-radius: 4px;
-    border: none;
+    border: #f94f5b;
     background-color: #f94f5b;
-    color: white;
+    color:white;
     font-weight: 700;
     font-size: 1em;
     text-transform: uppercase;
@@ -166,12 +167,14 @@ button:hover {
     font-size: 1rem;
 }
 
-.btn-row:hover {
+.btn-row .col-6 button:hover {
     cursor: pointer;
+    color: #f94f5b;
+    border: 3px solid #f94f5b;
+    background: white;
 }
 
 #information-container {
-    background: #f94f5b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,8 +185,8 @@ button:hover {
     border: 2px solid #283d44;
     border-radius: 20px;
     backdrop-filter: blur(100px);
-    box-shadow: 10px 5px 30px -14px #f94f5b;
-    color: white;
+    box-shadow: 10px 5px 35px -14px #f94f5b;
+    color: #283d44;
     font-weight: 500;
     font-size: 1.3rem;
     padding-top: 20px;
@@ -207,6 +210,17 @@ button:hover {
 
 .arrow img {
     width: 30px;
+}
+
+footer {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+footer h4 {
+    font-size:larger;
 }
 
 

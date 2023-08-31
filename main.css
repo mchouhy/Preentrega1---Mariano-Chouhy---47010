@@ -91,8 +91,6 @@ button:hover {
 }
 
 .slider {
-    position: sticky;
-    top: 0;
     height: 100px;
     margin-top: 45px;
     margin-bottom: 45px;
@@ -120,22 +118,14 @@ button:hover {
     color: #f94f5b;
 }
 
-.section-calculator {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 .calculator-forms {
     display: flex;
     gap: 50px;
     font-family: 'Poppins', sans-serif;
-    height: 500px;
     margin-bottom: 50px;
 }
 
 #calculator-container {
-    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,8 +144,8 @@ button:hover {
 }
 
 .btn-row button {
-    width: 207px;
-    height: 38px;
+    width: 12.9rem;
+    height: 2.3rem;
     border-radius: 4px;
     border: #f94f5b;
     background-color: #f94f5b;
@@ -185,7 +175,6 @@ button:hover {
     gap: 20px;
     border: 2px solid #283d44;
     border-radius: 20px;
-    backdrop-filter: blur(100px);
     box-shadow: 10px 5px 35px -14px #f94f5b;
     color: #283d44;
     font-weight: 500;
@@ -201,7 +190,20 @@ button:hover {
     padding-bottom: 10px;
 }
 
-.arrow {
+footer {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+footer h4 {
+    font-size:larger;
+    text-align: center;
+}
+
+footer .arrow {
     display: flex;
     justify-content: center;
     color: #283d44;
@@ -209,22 +211,9 @@ button:hover {
     margin-bottom: 40px;
 }
 
-.arrow img {
+footer .arrow img {
     width: 30px;
 }
-
-footer {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 5px;
-}
-
-footer h4 {
-    font-size:larger;
-}
-
-
 
 @media (max-width: 991px) {
     .hero {
@@ -247,7 +236,6 @@ footer h4 {
         align-items: center;
         gap: 50px;
         font-family: 'Poppins', sans-serif;
-        margin-bottom: 20rem;
     }
 
     #calculator-container {
@@ -259,8 +247,41 @@ footer h4 {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
+}
 
-    .arrow {
-        padding: 40px;
+@media (max-width: 576px) {
+
+    .hero-text h1 {
+        font-size: 2.3rem;
     }
+    
+    .hero-text p {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text button {
+        font-size: 1em;
+    }
+
+    .slider .slide {
+        font-size: 1.5rem;
+    }
+
+    #calculator-container {
+        font-size: 1rem;
+    }
+
+    #calculator-container .btn-row {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    #information-container {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.7rem
+    }
+
 }

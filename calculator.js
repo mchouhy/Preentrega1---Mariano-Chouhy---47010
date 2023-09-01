@@ -1,15 +1,14 @@
 //ACCESO A LOS ELEMENTOS DEL DOM DE INDEX.HTML//
 
-const fromUnitConversion = document.getElementById("unitSelectorFrom");
+let fromUnitConversion = document.getElementById("unitSelectorFrom");
 
-const toUnitConversion = document.getElementById("unitSelectorTo");
+let toUnitConversion = document.getElementById("unitSelectorTo");
 
-let conversionNumber = document.getElementsByClassName("conversionNumber");
+let conversionNumber = document.getElementsById("formGroupExampleInput");
 
-let conversionResult = document.getElementsByClassName("conversionResult");
+let conversionResult = document.getElementsById("formGroupExampleInput2");
 
 
 //EVENTOS//
 
-console.log(fromUnitConversion);
 

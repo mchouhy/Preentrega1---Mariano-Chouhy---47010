@@ -31,7 +31,6 @@ header .container h1 span {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .hero img {
@@ -91,9 +90,8 @@ button:hover {
 }
 
 .slider {
-    height: 100px;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     overflow: hidden;
 }
 
@@ -104,18 +102,20 @@ button:hover {
     width: calc(250px * 14);
 }
 
-.slider .slide {
-    height: 150px;
+.slider .slide-track .slide {
     width: 150px;
     font-family: 'Poppins', sans-serif;
     font-size: 2.8rem;
-    margin-bottom: 8px;
     color: #283d44;
-    text-align: center;
 }
 
-.slider .slide2 {
+.slider .slide-track .slide2 {
     color: #f94f5b;
+}
+
+.slider .slide-track .slide2 h3 {
+    padding: 0;
+    margin: 0;
 }
 
 .calculator-forms {

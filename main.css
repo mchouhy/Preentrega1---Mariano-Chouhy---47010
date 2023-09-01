@@ -11,8 +11,31 @@ header {
     padding-bottom: 60px;
 }
 
-header .container {
+header .header-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Poppins";
+}
+
+.user-container a {
+    text-decoration: none;
+    color: #283d44;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.user-container a:hover {
+    background-color: transparent;
+    color: #f94f5b;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 

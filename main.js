@@ -1,8 +1,8 @@
 // VARIABLES GLOBALES //
 
-let user;
+let user = [];
 
-let password;
+let password = [];
 
 let conversionUnit;
 

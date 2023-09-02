@@ -15,7 +15,7 @@ function changeAction() {
 }
 
 function loginSuccesfull() {
-    return loginForm.action = "/index.html";
+    return loginForm.action = "../index.html";
 }
 
 

@@ -1,3 +1,5 @@
+//ARCHIVO JS UTILIZADO PARA LA PRE-ENTREGA 1 y 2. ACTUALMENTE NO APLICA. PARA PRE-ENTREGA 3 VER calculator.js y login.js//
+
 // VARIABLES GLOBALES //
 
 let user = [];
@@ -52,7 +54,7 @@ function getUnit() {
         conversionUnit = prompt("Choose what CSS length units you want to convert. Type:\npx to rem\nrem to px\npx to cm\ncm to px");
     }
 
-    const conversion = conversions.find(conv => conv.type === conversionUnit);
+    const conversion = conversions.find(conversions => conversions.type === conversionUnit);
     if (conversion) {
         conversionNumber = parseFloat(prompt("Enter the number you want to convert")); 
         while (isNaN(conversionNumber)) {

@@ -34,8 +34,11 @@
         <!--CDN AOS ANIMATIONS-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         
+        <!--CDN SWEET ALERT JS-->
+        <link rel="stylesheet" href="sweetalert2.min.css">
+        
         <!--CSS Link-->
-        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./css/main.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     
@@ -44,7 +47,7 @@
         <div class="container header-container">
             <h1 class="animate__animated animate__backInDown">PIXEL <span>CONVERTER</span></h1>
             <div class="user-container">
-            <a href="./login.html">Login</a>
+            <a href=".//html/login.html">Login</a>
             <i class='bx bxs-user'></i>
             </div>
         </div>
@@ -94,47 +97,36 @@
         <div id="calculator-container" class="container">
             <div class="row">
                 <div class="col mb-3">
-                    <label for="formGroupExampleInput" class="form-label">From:</label>
-                    <select id="unitSelectorFrom" class="form-select" aria-label="Default select example">
-                        <option selected>--Select Lenght Unit--</option>
-                        <option value="1">Pixels</option>
-                        <option value="2">Rem</option>
-                        <option value="3">Centimeters</option>
-                    </select>
+                    <label for="formGroupExampleInput" class="form-label">Pixels:</label>
+                    <input id="pxInput" class="form-control" type="number" placeholder="Pixels" aria-label="default input example">
                 </div>
                 <div class="col mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">To:</label>
-                    <select id="unitSelectorTo" class="form-select" aria-label="Default select example">
-                        <option selected>--Select Lenght Unit--</option>
-                        <option value="1">Pixels</option>
-                        <option value="2">Rem</option>
-                        <option value="3">Centimeters</option>
-                    </select>
+                    <label for="formGroupExampleInput2" class="form-label">Rem:</label>
+                    <input id="remInput" class="form-control" type="number" placeholder="Rem" aria-label="default input example">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Value:</label>
-                        <input type="number" class="form-control conversionNumber" id="formGroupExampleInput"
-                            placeholder="Conversion Number">
+                        <label for="formGroupExampleInput" class="form-label">Centimeters:</label>
+                        <input type="number" class="form-control conversionNumber cmInput" id="formGroupExampleInput" placeholder="Centimeters">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">Result:</label>
-                        <input type="text" class="form-control conversionResult" id="formGroupExampleInput2" placeholder="" disabled>
+                        <label for="formGroupExampleInput2" class="form-label">Em:</label>
+                        <input type="number" class="form-control conversionResult emInput" id="formGroupExampleInput2" placeholder="Em">
                     </div>
                 </div>
             </div>
             <div class="row btn-row">
                 <div class="col-6">
-                    <button type="button" class="btn btn-primary"
+                    <button id="resetBtn" type="button" class="btn btn-primary"
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         Reset</button>
                 </div>
                 <div class="col-6">
-                    <button type="button" class="btn btn-primary"
+                    <button id="convertBtn" type="button" class="btn btn-primary"
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         Convert</button>
                 </div>
@@ -148,8 +140,6 @@
                 <li>Millimeters: 1mm = 1/10th of 1cm</li>
                 <li>Quarter-Millimeters: 1Q = 1/40th of 1cm</li>
                 <li>Inches: 1in = 2.54cm = 96px</li>
-                <li>Picas: 1pc = 1/6th of 1in</li>
-                <li>Points: 1pt = 1/72nd of 1in</li>
                 <li>Pixels: 1px = 1/96th of 1in</li>
                 <li>Rem: 1rem = Font size of the root element.</li>
                 <li>Em: 1em = Font size of the parent.</li>
@@ -171,8 +161,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
 
+    <!--CDN SWEET ALERT JS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
     <!--Javascript Link-->
-    <script src="./calculator.js"></script>
+    <script src=".//javascript/calculator.js"></script>
 </body>
 
 </html>

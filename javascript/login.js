@@ -33,12 +33,15 @@ loginBtn.onclick = validateUser = () =>{
 
 if(userData === checkUser && passwordData === checkPassword) {
         loginSuccesfull();
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'You have to enter a valid user and password. Try again',
-        });
+
+    } else if(userData === "" || passwordData === "") {
         changeAction();
-    }
-}
+
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You have to enter a valid user and password. Try again',
+            });
+            changeAction();}
+}   

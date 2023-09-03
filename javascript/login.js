@@ -35,7 +35,7 @@ loginBtn.onclick = validateUser = () => {
         loginSuccesfull();
     } else if (userData === "" && passwordData === "") {
         Toastify({
-            text: "You have to enter a username and a password",
+            text: "Enter your username and password",
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
             newWindow: true,
@@ -52,7 +52,7 @@ loginBtn.onclick = validateUser = () => {
 
     } else if (userData === "") {
         Toastify({
-            text: "You have to enter a username",
+            text: "Enter your username",
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
             newWindow: true,
@@ -69,7 +69,7 @@ loginBtn.onclick = validateUser = () => {
 
     } else if (passwordData === "") {
         Toastify({
-            text: "You have to enter a password",
+            text: "Enter your password",
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
             newWindow: true,

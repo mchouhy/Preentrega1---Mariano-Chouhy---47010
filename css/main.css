@@ -288,12 +288,16 @@ footer .arrow img {
 
 @media (max-width: 576px) {
 
+    header .header-container h1 {
+        font-size: 1.8rem;
+    }
+
     .hero-text h1 {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     
     .hero-text p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .hero-text button {

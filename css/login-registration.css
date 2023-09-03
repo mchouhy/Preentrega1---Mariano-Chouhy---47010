@@ -17,8 +17,10 @@
 
 .login-header .login-header-container p {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
+    text-align:center;
 }
+
 
 .login-header .login-header-container p span {
     color: #f94f5b;
@@ -39,7 +41,7 @@
 
 
 .login-container {
-    padding-top: 6rem;
+    padding-top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,4 +137,18 @@
 
 .wrapper .register-link p a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+
+    .login-header .login-header-container .login-h1 a {
+        font-size: 2rem;
+    }
+
+    .login-header .login-header-container .login-h1 a span {
+        font-size: 2rem;
+    }
+    .login-header .login-header-container p {
+        font-size: 1rem;
+    }
 }

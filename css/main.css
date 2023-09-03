@@ -292,6 +292,19 @@ footer .arrow img {
         font-size: 1.8rem;
     }
 
+    .user-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        font-family: "Poppins";
+        font-size: 0.8rem;
+    }
+
+    .user-container a {
+        font-size: 0.8rem;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
     }

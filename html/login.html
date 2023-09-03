@@ -45,6 +45,9 @@
     <!--CDN UNPKG CSS-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--CDN TOASTIFY CSS-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!--CSS Link-->
     <link rel="stylesheet" href="../css/login-registration.css">
 </head>
@@ -67,11 +70,10 @@
             <form id="login-form" action="../index.html">
                 <h1>Login</h1>
                 <div class="input-container">
-                    <input id="userInput" type="text" placeholder="Username" autocomplete="off" required>
+                    <input id="userInput" type="text" placeholder="Username" autocomplete="off">
                 </div>
                 <div class="input-container">
-                    <input id="passwordInput" type="password" placeholder="Password" autocomplete="current-password"
-                        required>
+                    <input id="passwordInput" type="password" placeholder="Password" autocomplete="current-password">
                 </div>
                 <div class="forgot-password">
                     <label for=""><input type="checkbox">Remember me</label>
@@ -96,6 +98,9 @@
 
     <!--CDN SWEET ALERT JS-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+
+    <!--CDN TOASTIFY JS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <!--Javascript Link-->
     <script src="/javascript/login.js"></script>

@@ -8,13 +8,13 @@ let loginBtn = document.getElementById('loginBtn');
 
 let loginForm = document.getElementById('login-form');
 
-//FUNCION DE LOGIN CORRECTO
+//FUNCIÓN PARA LOGIN CORRECTO
 
 function loginSuccesfull() {
     return loginForm.action = "../index.html";
 }
 
-//EVENTO SOBRE EL BOTON DE LOGIN Y FUNCIÓN QUE ALMACENA USUARIO Y CONTRASEÑA EN EL LOCAL STORAGE
+//EVENTO SOBRE EL BOTON DE LOGIN Y FUNCIÓN QUE VALIDA SI EL USUARIO Y CONTRASEÑA ESTÁ ALMACENADO EL LOCAL STORAGE
 
 loginBtn.onclick = validateUser = () => {
 
@@ -22,7 +22,11 @@ loginBtn.onclick = validateUser = () => {
 
     passwordData = passwordInput.value;
 
+//PARSE DEL OBJETO GUARDADO EN LOCAL STORAGE PARA PODER SER LEÍDO DESDE LOCAL STORAGE
+
     checkUserInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+//CONDICIONAL PARA VALIDAR SI EL USUARIO Y CONTRASEÑA INGRESADO ESTÁ REGISTRADO
 
     if (userData === checkUserInfo.user && passwordData === checkUserInfo.password) {
         loginSuccesfull();

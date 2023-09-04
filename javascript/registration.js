@@ -8,7 +8,7 @@ let loginBtn = document.getElementById('loginBtn');
 
 let registerForm = document.getElementById('register-form');
 
-//EVENTO SOBRE EL BOTON DE SUBMIT Y FUNCIÓN QUE ALMACENA USUARIO Y CONTRASEÑA EN EL LOCAL STORAGE
+//EVENTO SOBRE EL BOTON DE SUBMIT Y FUNCIÓN QUE ALMACENA UN OBJETO DE USUARIO Y CONTRASEÑA EN EL LOCAL STORAGE
 
 loginBtn.onclick = newUser = () =>{
     let userInfo = {
@@ -81,6 +81,8 @@ loginBtn.onclick = newUser = () =>{
             },
             onClick: function () { } // Callback after click
         }).showToast();
+
+    //STRINGIFY DEL OBJETO PARA PODER SER LEÍDO EN LOCAL STORAGE
     
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
     }  

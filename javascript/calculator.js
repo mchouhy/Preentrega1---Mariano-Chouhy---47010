@@ -1,4 +1,4 @@
-//FORMULAS DE CONVESIÓN//
+//FORMULAS DE CONVERSIÓN//
 
 const conversions = [
     { type: "px to rem", factor: 1/16 },

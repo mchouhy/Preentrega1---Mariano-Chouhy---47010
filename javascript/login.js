@@ -16,17 +16,15 @@ function loginSuccesfull() {
 
 //EVENTO SOBRE EL BOTON DE LOGIN Y FUNCIÓN QUE ALMACENA USUARIO Y CONTRASEÑA EN EL LOCAL STORAGE
 
-
 loginBtn.onclick = validateUser = () => {
+
     userData = userInput.value;
 
     passwordData = passwordInput.value;
 
-    checkUser = localStorage.getItem('userName');
+    checkUserInfo = JSON.parse(localStorage.getItem('userInfo'));
 
-    checkPassword = localStorage.getItem('userPassword');
-
-    if (userData === checkUser && passwordData === checkPassword) {
+    if (userData === checkUserInfo.user && passwordData === checkUserInfo.password) {
         loginSuccesfull();
     } else if (userData === "" && passwordData === "") {
         Toastify({

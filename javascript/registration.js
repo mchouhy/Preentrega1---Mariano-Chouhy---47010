@@ -11,14 +11,14 @@ let registerForm = document.getElementById('register-form');
 //EVENTO SOBRE EL BOTON DE SUBMIT Y FUNCIÓN QUE ALMACENA USUARIO Y CONTRASEÑA EN EL LOCAL STORAGE
 
 loginBtn.onclick = newUser = () =>{
-
-    let user = userInput.value;
-    
-    let password = passwordInput.value;
+    let userInfo = {
+        user: userInput.value, 
+        password: passwordInput.value
+    }
 
 // CONDICIONAL CON MENSAJE TOAST DE ERROR EN CASO DE NO REGISTRAR UN USUARIO Y/O CONTRASEÑA. ALMACENAMIENTO EN LOCAL STORAGE SI SE INGRESA USUARIO Y CONTRASEÑA.
 
-    if (user === "" && password === "") {
+    if (userInfo.user === "" && userInfo.password === "") {
         Toastify({
             text: "Register a username and password",
             duration: 3000,
@@ -34,7 +34,7 @@ loginBtn.onclick = newUser = () =>{
             onClick: function () { } // Callback after click
         }).showToast();
         
-    } else if (user === "") {
+    } else if (userInfo.user === "") {
         Toastify({
             text: "Register a username",
             duration: 3000,
@@ -50,7 +50,7 @@ loginBtn.onclick = newUser = () =>{
             onClick: function () { } // Callback after click
         }).showToast();
 
-    } else if (password === "") {
+    } else if (userInfo.password === "") {
         Toastify({
             text: "Register a password",
             duration: 3000,
@@ -82,8 +82,6 @@ loginBtn.onclick = newUser = () =>{
             onClick: function () { } // Callback after click
         }).showToast();
     
-        localStorage.setItem('userName', user);
-        
-        localStorage.setItem('userPassword', password);
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
     }  
 }

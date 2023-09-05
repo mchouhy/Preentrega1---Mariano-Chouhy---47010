@@ -61,6 +61,7 @@ convertBtn.addEventListener('click', () => {
             icon: 'error',
             title: 'Oops...',
             text: 'You have to enter a valid lenght unit value!',
+            confirmButtonColor: '#f94f5b'
         })
     }
 })

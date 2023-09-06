@@ -175,6 +175,11 @@ button:hover {
     text-align: center;
 }
 
+.form-control:focus {
+    border-color: rgb(249, 79, 91);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(249, 79, 91, 0.8);
+}
+
 #calculator-container .row {
     width: 100%;
     align-items: center;

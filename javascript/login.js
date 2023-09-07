@@ -11,7 +11,7 @@ let loginForm = document.getElementById('login-form');
 //FUNCIÓN PARA LOGIN CORRECTO
 
 function loginSuccesfull() {
-    return loginForm.action = "../index.html";
+    return location.href = "../index.html";
 }
 
 //EVENTO SOBRE EL BOTON DE LOGIN Y FUNCIÓN QUE VALIDA SI EL USUARIO Y CONTRASEÑA ESTÁ ALMACENADO EL LOCAL STORAGE
@@ -29,7 +29,23 @@ loginBtn.onclick = validateUser = () => {
 //CONDICIONAL PARA VALIDAR SI EL USUARIO Y CONTRASEÑA INGRESADO ESTÁ REGISTRADO
 
     if (userData === checkUserInfo.user && passwordData === checkUserInfo.password) {
-        loginSuccesfull();
+        Toastify({
+            text: "Login succesful",
+            duration: 5000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #03c04a, #03ac13)",
+            },
+            onClick: function () {} // Callback after click
+        }).showToast();
+
+        setTimeout(() => {loginSuccesfull()
+        }, 2000);
     } else if (userData === "" && passwordData === "") {
         Toastify({
             text: "Enter your username and password",

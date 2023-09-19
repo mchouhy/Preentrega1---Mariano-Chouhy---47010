@@ -1,0 +1,24 @@
+{
+    "userDB": [
+        {
+            "username": "marianochouhy",
+            "password": "mch"
+        },
+        {
+            "username": "joseperez",
+            "password": "jp"
+        },
+        {
+            "username": "pedrogonzalez",
+            "password": "pg"
+        },
+        {
+            "username": "martinzamora",
+            "password": "mz"
+        },
+        {
+            "username": "luciofernandez",
+            "password": "lf"
+        }
+    ]
+}
